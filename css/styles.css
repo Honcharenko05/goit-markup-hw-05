@@ -49,6 +49,10 @@ button {
   --light-slate: #8e8f99;
   --accent-color: #404bbf; /* фон span при checked */
   --icon-color: #f4f4fd; /* колір іконки при checked */
+  --checkbox-text-color: #8e8f99;
+  --checkbox-bg-color: #404bbf;
+  --checkbox-icon-color: #f4f4fd;
+  --link-color: #4d5ae5;
 }
 /* ===== Containers ===== */
 
@@ -632,17 +636,17 @@ button {
 .checkbox-label-icon {
   fill: transparent;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 10px;
+  height: 8px;
 }
 
 /* При активному чекбоксі (checked) змінюємо стиль span і іконки */
-input[type="checkbox"]:checked + .form-checkbox-label .checkbox-privacy-policy {
-  background-color: var(--accent-color);
+.form-checkbox-input:checked + .form-checkbox-label .checkbox-privacy-policy {
+  background-color: var(--checkbox-bg-color);
   border: none;
+  fill: var(--checkbox-icon-color);
 }
 
-input[type="checkbox"]:checked + .form-checkbox-label .checkbox-label-icon {
-  fill: var(--icon-color);
-}
 /* : Footer form */
 .footer-subscribe-form {
   display: flex;
@@ -651,6 +655,8 @@ input[type="checkbox"]:checked + .form-checkbox-label .checkbox-label-icon {
 }
 .privacy-policy-link {
   color: var(--iris);
+  margin-left: 4px;
+  text-decoration: underline;
 }
 .modal-window-btn {
   display: block;
