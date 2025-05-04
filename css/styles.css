@@ -578,9 +578,7 @@ button {
 .input-field:focus + .modal-close-icon use {
   fill: #4d5ae5;
 }
-.input-field:focus + .modal-close-icon use {
-  fill: unset;
-}
+
 .modal-form-comment {
   margin-bottom: 16px;
 }
